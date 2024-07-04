@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
     <link rel="shortcut icon" type="image/png" href="images/icones/logo.png"/>
     <title>UFCWeb - Calendrier</title>
 </head>
 <body>
     <header id="navbar"></header>
-
+    <div class="lg:w-[200vh] lg:h-[90vh] w-full min-h-[83vh]" id='calendar'></div>
+    <footer id="footer"></footer>
 
     
     <script src="index.js"></script>
-    <footer id="footer"></footer>
+    <script src ='calendar.js'></script>
+    
     
 </body>
 </html>

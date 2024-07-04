@@ -13,7 +13,8 @@
 
 <body>
     <header id="navbar"></header>
-    <main class="w-[480px] h-auto m-auto lg:w-[1140px] lg:m-auto">
+    <main class="w-[450px] h-auto m-auto lg:w-[1140px] lg:m-auto ">
+        <h1 class="text-4xl flex justify-center">Bienvenue sur UF<span class="text-pink-700 text-4xl ">CW</span>eb</h1>
         <div x-data="carousel({
             slides: [
                 {
@@ -29,11 +30,11 @@
                     imgAlt: 'Vibrant abstract painting with swirling blue and purple hues on a canvas.',
                 },
             ],
-        })" class="relative w-full overflow-hidden">
+        })" class="relative w-full overflow-hidden mt-[80px]">
 
             <!-- previous button -->
             <button type="button"
-                class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0 dark:bg-slate-900/40 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:focus-visible:outline-blue-600"
+                class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
                 aria-label="previous slide" x-on:click="previous()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"
                     stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
@@ -43,7 +44,7 @@
 
             <!-- next button -->
             <button type="button"
-                class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0 dark:bg-slate-900/40 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:focus-visible:outline-blue-600"
+                class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
                 aria-label="next slide" x-on:click="next()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"
                     stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
@@ -53,7 +54,7 @@
 
             <!-- slides -->
             <!-- Change min-h-[50svh] to your preferred height size -->
-            <div class="relative min-h-[50svh] w-auto">
+            <div class="relative min-h-[50vh] lg:min-h-[70svh] w-auto">
                 <template x-for="(slide, index) in slides">
                     <div x-show="currentSlideIndex == index + 1" class="absolute inset-0"
                         x-transition.opacity.duration.1000ms>
@@ -64,66 +65,114 @@
             </div>
 
             <!-- indicators -->
-            <div class="absolute rounded-xl bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 bg-white/75 px-1.5 py-1 md:px-2 dark:bg-slate-900/75"
+            <div class="absolute rounded-xl bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 bg-white/75 px-1.5 py-1 md:px-2"
                 role="group" aria-label="slides">
                 <template x-for="(slide, index) in slides">
-                    <button class="size-2 cursor-pointer rounded-full transition bg-slate-700 dark:bg-slate-300"
+                    <button class="size-2 cursor-pointer rounded-full transition bg-slate-700 "
                         x-on:click="currentSlideIndex = index + 1"
-                        x-bind:class="[currentSlideIndex === index + 1 ? 'bg-slate-700 dark:bg-slate-300' : 'bg-slate-700/50 dark:bg-slate-300/50']"
+                        x-bind:class="[currentSlideIndex === index + 1 ? 'bg-slate-700 ' : 'bg-slate-700/50 ']"
                         x-bind:aria-label="'slide ' + (index + 1)"></button>
                 </template>
             </div>
         </div>
-        <article class="lg:w-[1140px] lg:h-auto lg:m-auto flex  ">
-
-            <div class="flex">
-                <div
-                    class=" items-center bg-white border border-gray-200  shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">             
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">L’UFC, acronyme de Ultimate
-                            Fighting
-                            Championship, est une organisation américaine
-                            d’arts martiaux mixtes (MMA). Elle est actuellement reconnue comme la plus importante ligue
-                            mondiale
-                            de
-                            ce sport de combat.
+    </main>
+    <!-- component -->
+    <section>
+        <div class="py-16">
+            <div class="mx-auto px-6 max-w-6xl text-gray-500">
+                <div class="relative">
+                    <div class="relative z-10 grid gap-3 grid-cols-6">
+                        <div
+                            class="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 ">
+                            <div class="size-fit m-auto relative">
+                                <div class="relative h-24 w-56 flex items-center">
+                                   
+                                    <span
+                                        class="w-fit block mx-auto text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600 ">L'UFC c'est quoi ?</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div
+                            class="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white border border-gray-200 ">
+                            <div>
+                                <div class="mt-14 text-center relative z-10 space-y-2">
+                                    <p class=" text-gray-700">L’UFC, acronyme de Ultimate Fighting
+                                        Championship, est une organisation américaine
+                                        d’arts martiaux mixtes (MMA). Elle est actuellement reconnue comme la plus importante ligue mondiale
+                                        de
+                                        ce sport de combat.
+                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white border border-gray-200">
+                            <div>
+                                <div class="pt-6 lg:px-6">
+                                </div>
+                                <div class="text-center relative z-10 space-y-2">
+                                    <p class= "text-gray-700">L’UFC a révolutionné les arts martiaux depuis sa création en 1993. La
+                                        première soirée tenue par la
+                                        promotion à Denver, dans le Colorado, se présentait comme un tournoi permettant de confronter
+                                        différents
+                                        styles d’arts martiaux et sports de combat dans des règles libres. Cet événement est souvent
+                                        considéré
+                                        comme un pilier de l’avènement des « MMA modernes ».
+                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white border border-gray-200 ">
+                            <div class="grid sm:grid-cols-2">
+                                <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
+                                    <div class="space-y-2">
+                                        <p class="text-gray-700">Depuis, l’UFC a évolué, passant d’une compétition
+                                            inter-styles à un sport de combat dont les règles sont désormais bien établies et reconnues par de
+                                            nombreuses commissions athlétiques aux États-Unis et à travers le monde.
                         </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/15158785-gants-de-boxe-logo-vecteur-icone-illustration-vectoriel.jpg" alt="">
+                                    <div class="absolute flex gap-1 top-2 left-3">
+                                        <span
+                                            class="block size-2 rounded-full border"></span>
+                                        <span
+                                            class="block size-2 rounded-full border"></span>
+                                        <span
+                                            class="block size-2 rounded-full border"></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white border border-gray-200">
+                            <div class="h-full grid sm:grid-cols-2">
+                                <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
+                                    <div>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8X2RqMAVFWCAssmy4hMBSGY_g1jIZMVjOQ&s" alt="">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <p class=" text-gray-700">Elle a sous contrat environ 450
+                                            compétiteurs et organise des événements à travers le monde, principalement aux États-Unis, mais
+                                            aussi au
+                                            Japon, au Brésil, en Australie et en Chine.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    </a>
-
-                </div>
-                <div
-                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200  shadow hover:bg-gray-600">
-
-                    <p class="font-normal text-white">L’UFC a révolutionné les arts martiaux depuis sa création en 1993.
-                        La
-                        première soirée tenue par la
-                        promotion à Denver, dans le Colorado, se présentait comme un tournoi permettant de confronter
-                        différents
-                        styles d’arts martiaux et sports de combat dans des règles libres. Cet événement est souvent
-                        considéré
-                        comme un pilier de l’avènement des « MMA modernes ».</p>
-                </div>
-                <div
-                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200 rounded-lg shadow hover:bg-gray-600">
-
-                    <p class="font-normal text-white">Depuis, l’UFC a évolué, passant d’une compétition
-                        inter-styles à un sport de combat dont les règles sont désormais bien établies et reconnues par
-                        de
-                        nombreuses commissions athlétiques aux États-Unis et à travers le monde.</p>
-                </div>
-                <div
-                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200 rounded-lg shadow hover:bg-gray-600">
-
-                    <p class="font-normal text-white">Elle a sous contrat environ 450
-                        compétiteurs et organise des événements à travers le monde, principalement aux États-Unis, mais
-                        aussi au
-                        Japon, au Brésil, en Australie et en Chine</p>
                 </div>
             </div>
-        </article>
+        </div>
+    </section>
 
-    </main>
+
+    <footer id="footer"></footer>
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('carousel', (carouselData = {
@@ -150,6 +199,7 @@
             }))
         })
     </script>
+
     <script src="index.js"></script>
 </body>
 
