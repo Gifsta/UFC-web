@@ -43,7 +43,7 @@
             </button>
             <!-- bouton suivant -->
             <button type="button"
-                class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
+                class="absolute right-6 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
                 aria-label="next slide" x-on:click="next()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"
                     stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
@@ -51,11 +51,11 @@
                 </svg>
             </button>
             <!-- slides -->
-            <div class="relative min-h-[50vh] lg:min-h-[70svh] w-auto">
+            <div class="relative min-h-[40vh] lg:min-h-[70svh] w-">
                 <template x-for="(slide, index) in slides">
                     <div x-show="currentSlideIndex == index + 1" class="absolute inset-0"
                         x-transition.opacity.duration.1000ms>
-                        <img class="absolute w-full h-full inset-0  text-slate-700 " x-bind:src="slide.imgSrc"
+                        <img class="absolute w-[450px] h-[40vh] lg:w-full lg:h-full inset-0  text-slate-700 " x-bind:src="slide.imgSrc"
                             x-bind:alt="slide.imgAlt" />
                     </div>
                 </template>
