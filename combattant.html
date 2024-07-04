@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="images/icones/logo.png" />
+    <title>UFCWeb - Home</title>
+</head>
+
+<body>
+
+    <header id="navbar"></header>
+    <div id="wrapper"></div>
+    <footer id="footer"></footer>
+    <script src="index.js"></script>
+    <script>
+        fetch('json/Fighters.json')
+            .then(rep => rep.json())
+            .then(rep => {
+                new gridjs.Grid({
+                    columns: [
+                        {
+                            id: "FighterId",
+                            hidden: true
+                        },
+                        {
+                            id: "FirstName",
+                            name: "Prenom",
+                            width: "35%",
+
+                            attributes:
+                            {
+                                "class": "pl-1 py-3 border-[1px]"
+                            },
+
+                            formatter: (cells, row,) => gridjs.html(`<a href = "InfoCombattant.html?id=${row.cells[0].data}"> ${row.cells[1].data}</a>`)
+
+                        },
+                        {
+                            id: "LastName",
+                            name: "Nom",
+                            width: "35%",
+                            attributes: {
+                                "class": "pl-1 py-3 border-[1px]"
+                            },
+                            formatter: (cells, row,) => gridjs.html(`<a href = "InfoCombattant.html?id=${row.cells[0].data}"> ${row.cells[2].data}</a>`)
+
+                        },
+                        {
+                            id: "Nickname",
+                            name: "Surnom",
+                            width: "35%",
+                            attributes: {
+                                "class": "pl-1 py-3 border-[1px]"
+                            },
+                            formatter: (cells, row,) => gridjs.html(`<a href = "InfoCombattant.html?id=${row.cells[0].data}"> ${row.cells[3].data}</a>`)
+
+                        },
+                    ],
+                    pagination: true,
+                    search: true,
+                    data: rep
+                }).render(document.getElementById("wrapper"));
+
+            })
+
+    </script>
+
+</body>
+
+</html>

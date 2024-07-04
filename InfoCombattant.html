@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="image/png" href="images/icones/logo.png" />
+</head>
+<title>Information combattant</title>
+</head>
+
+<body>
+    <header id='navbar'></header>
+    <main class="w-[480px] h-auto m-auto lg:w-[1140px] lg:m-auto">
+        <div class="w-[50vh] lg:flex lg:justify-between flex-col ">
+            <img src="images/boxe.jpg" alt="boxeur">
+            <img src="images/boxe2.jpg" alt="boxeur2">
+        </div>
+        <div class="mt-[5vh] lg:rounded-lg bg-[#1B1F23] text-white p-3 flex-col">
+            <h2 class="text-3xl font-mono	font-family: ui-monospace pb-2">Information du combattant</h2>
+            <p>Prénom :
+                <span id="firstName"></span>
+            </p>
+
+            <p>Nom :
+                <span id="lastName"></span>
+            </p>
+            <p>Surnom :
+                <span id="nickname"></span>
+            </p>
+            <p>Catégorie de poid :
+                <span id=weightClass></span>
+            </p>
+            <p>Date de naissance :
+                <span id="birthDate"></span>
+            </p>
+            <p>Taille :
+                <span id="height"></span>
+            </p>
+            <p>Poids :
+                <span id="weight"></span>
+            </p>
+            <p>Portés des coups :
+                <span id="reach"></span>
+            </p>
+            <p>Win :
+                <span id="wins"></span>
+            </p>
+            <p>Loose
+                <span id="losses"></span>
+            </p>
+            <p>Égalité :
+                <span id="draws"></span>
+            </p>
+            <p>No contests :
+                <span id="noContests"></span>
+            </p>
+            <p>Ko technique :
+                <span id="technicalKnockouts"></span>
+            </p>
+            <div>
+                <p>Ko technique perdu :
+                    <span id="technicalKnockoutLosses"></span>
+                </p>
+                <p>Soumission :
+                    <span id="submissions"></span>
+                </p>
+                <p>Soumission perdu :
+                    <span id="submissionLosses"></span>
+                </p>
+                <p>Titres remportés :
+                    <span id="titleWins"></span>
+                </p>
+                <p>Titres perdu :
+                    <span id="titleLosses"></span>
+                </p>
+                <p>Titre à équalité :
+                    <span id="titleDraws"></span>
+                </p>
+                <p>Coups envoyé par minutes :
+                    <span id="sigStrikesLandedPerMinute"></span>
+                </p>
+                <p>Précision des coups :
+                    <span id="sigStrikeAccuracy"></span>
+                </p>
+                <p>Réussite de takedown :
+                    <span id="takedownAverage"></span>
+                </p>
+                <p>Réussite de soumission :
+                    <span id="submissionAverage"></span>
+                </p>
+                <p>Taux de KO :
+                    <span id="knockoutPercentage"></span>
+                </p>
+                <p>Taux de TKO :
+                    <span id="technicalKnockoutPercentage"></span>
+                </p>
+                <p>Taux de décision :
+                    <span id="DecisionPercentage"></span>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer id="footer"></footer>
+    <script src="index.js"></script>
+    <script src="selectioncombat.js"></script>
+</body>
+
+</html>

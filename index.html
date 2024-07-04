@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" type="image/png" href="images/icones/logo.png" />
+    <title>UFCWeb - Home</title>
+</head>
+
+<body>
+    <header id="navbar"></header>
+    <main class="w-[480px] h-auto m-auto lg:w-[1140px] lg:m-auto">
+        <div x-data="carousel({
+            slides: [
+                {
+                    imgSrc: 'https://www.francebleu.fr/s3/cruiser-production/2023/06/99afca56-adf6-4b6b-9d12-801fdbb213bd/1200x680_sc_maxsportsfrtwo730606.jpg',
+                    imgAlt: 'Vibrant abstract painting with swirling blue and light pink hues on a canvas.',
+                },
+                {
+                    imgSrc: 'https://cdn.vox-cdn.com/thumbor/5fY8DMTyGPfdPiJUgxw4euulFDQ=/438x55:1966x1074/920x613/filters:focal(438x55:1966x1074):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/35817656/191_Conor_McGregor_vs_Diego_Brandao.0.jpg',
+                    imgAlt: 'Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.',
+                },
+                {
+                    imgSrc: 'https://s.rfi.fr/media/display/e46ecb3a-fa7a-11ee-a118-005056a97e36/w:980/p:16x9/2024-04-14T054757Z_1265687397_MT1USATODAY23022477_RTRMADP_3_MMA-UFC-300-GAETHJE-VS-HOLLOWAY.JPG',
+                    imgAlt: 'Vibrant abstract painting with swirling blue and purple hues on a canvas.',
+                },
+            ],
+        })" class="relative w-full overflow-hidden">
+
+            <!-- previous button -->
+            <button type="button"
+                class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0 dark:bg-slate-900/40 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:focus-visible:outline-blue-600"
+                aria-label="previous slide" x-on:click="previous()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                    stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+
+            <!-- next button -->
+            <button type="button"
+                class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0 dark:bg-slate-900/40 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:focus-visible:outline-blue-600"
+                aria-label="next slide" x-on:click="next()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                    stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            <!-- slides -->
+            <!-- Change min-h-[50svh] to your preferred height size -->
+            <div class="relative min-h-[50svh] w-auto">
+                <template x-for="(slide, index) in slides">
+                    <div x-show="currentSlideIndex == index + 1" class="absolute inset-0"
+                        x-transition.opacity.duration.1000ms>
+                        <img class="absolute w-full h-full inset-0  text-slate-700 " x-bind:src="slide.imgSrc"
+                            x-bind:alt="slide.imgAlt" />
+                    </div>
+                </template>
+            </div>
+
+            <!-- indicators -->
+            <div class="absolute rounded-xl bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 bg-white/75 px-1.5 py-1 md:px-2 dark:bg-slate-900/75"
+                role="group" aria-label="slides">
+                <template x-for="(slide, index) in slides">
+                    <button class="size-2 cursor-pointer rounded-full transition bg-slate-700 dark:bg-slate-300"
+                        x-on:click="currentSlideIndex = index + 1"
+                        x-bind:class="[currentSlideIndex === index + 1 ? 'bg-slate-700 dark:bg-slate-300' : 'bg-slate-700/50 dark:bg-slate-300/50']"
+                        x-bind:aria-label="'slide ' + (index + 1)"></button>
+                </template>
+            </div>
+        </div>
+        <article class="lg:w-[1140px] lg:h-auto lg:m-auto flex  ">
+
+            <div class="flex">
+                <div
+                    class=" items-center bg-white border border-gray-200  shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">             
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">L’UFC, acronyme de Ultimate
+                            Fighting
+                            Championship, est une organisation américaine
+                            d’arts martiaux mixtes (MMA). Elle est actuellement reconnue comme la plus importante ligue
+                            mondiale
+                            de
+                            ce sport de combat.
+                        </p>
+                    </div>
+                    </a>
+
+                </div>
+                <div
+                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200  shadow hover:bg-gray-600">
+
+                    <p class="font-normal text-white">L’UFC a révolutionné les arts martiaux depuis sa création en 1993.
+                        La
+                        première soirée tenue par la
+                        promotion à Denver, dans le Colorado, se présentait comme un tournoi permettant de confronter
+                        différents
+                        styles d’arts martiaux et sports de combat dans des règles libres. Cet événement est souvent
+                        considéré
+                        comme un pilier de l’avènement des « MMA modernes ».</p>
+                </div>
+                <div
+                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200 rounded-lg shadow hover:bg-gray-600">
+
+                    <p class="font-normal text-white">Depuis, l’UFC a évolué, passant d’une compétition
+                        inter-styles à un sport de combat dont les règles sont désormais bien établies et reconnues par
+                        de
+                        nombreuses commissions athlétiques aux États-Unis et à travers le monde.</p>
+                </div>
+                <div
+                    class="block max-w-[600px] p-2 bg-gray-800 border border-gray-200 rounded-lg shadow hover:bg-gray-600">
+
+                    <p class="font-normal text-white">Elle a sous contrat environ 450
+                        compétiteurs et organise des événements à travers le monde, principalement aux États-Unis, mais
+                        aussi au
+                        Japon, au Brésil, en Australie et en Chine</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('carousel', (carouselData = {
+                slides: [],
+            },) => ({
+                slides: carouselData.slides,
+                currentSlideIndex: 1,
+                previous() {
+                    if (this.currentSlideIndex > 1) {
+                        this.currentSlideIndex = this.currentSlideIndex - 1
+                    } else {
+                        // If it's the first slide, go to the last slide           
+                        this.currentSlideIndex = this.slides.length
+                    }
+                },
+                next() {
+                    if (this.currentSlideIndex < this.slides.length) {
+                        this.currentSlideIndex = this.currentSlideIndex + 1
+                    } else {
+                        // If it's the last slide, go to the first slide    
+                        this.currentSlideIndex = 1
+                    }
+                },
+            }))
+        })
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
