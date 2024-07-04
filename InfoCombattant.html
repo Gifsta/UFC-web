@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <!-- Appel de la navbar -->
     <header id='navbar'></header>
     <main class="w-[480px] h-auto m-auto lg:w-[1140px] lg:m-auto">
         <div class="w-[50vh] lg:flex lg:justify-between  ">
             <img src="images/boxe.jpg" alt="boxeur">
             <img src="images/boxe2.jpg" alt="boxeur2">
         </div>
+        <!-- Affichage des données résultant de Fighters.json -->
         <div class="mt-[5vh] lg:rounded-lg bg-[#1B1F23] text-white p-3 flex-col">
             <h2 class="text-3xl font-mono	font-family: ui-monospace pb-2">Information du combattant</h2>
             <p>Prénom :
@@ -103,9 +105,11 @@
             </div>
         </div>
     </main>
-    
+    <!-- Appel du footer -->
     <footer id="footer"></footer>
+    <!-- Appel du script index.js qui permet de mettre en place le footer et le header  -->
     <script src="index.js"></script>
+    <!-- Appel du script selectioncombat.js pour permettre d'afficher les données dans le tableau -->
     <script src="selectioncombat.js"></script>
 </body>
 

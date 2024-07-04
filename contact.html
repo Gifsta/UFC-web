@@ -9,31 +9,40 @@
     <link rel="shortcut icon" type="image/png" href="images/icones/logo.png"/>
 </head>
 <body>
+    <!-- Appel de la navbar -->
     <header id="navbar"></header>
     <main class="lg:mt-[75px]">
         <section class="bg-white lg:w-[1140px] lg:m-auto lg:rounded-lg ">
             <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                <!-- Titre afficher en haut du formulaire -->
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contactez-nous</h2>
+                <!-- Texte pour montré a l'utilisateur ce qu'il peut nous envoyer -->
                 <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Vous avez un problème technique ? Vous souhaitez nous faire part de vos commentaires sur une fonction bêta ? Vous avez besoin de détails sur notre plan d'affaires ? N'hésitez pas à nous contacter.</p>
                 <form action="#" class="space-y-8">
                     <div>
+                        <!-- Prend uniquement l'email -->
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Votre email</label>
                         <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="aaaa@entreprise.com" required>
                     </div>
                     <div>
+                        <!-- L'objet de la demande -->
                         <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Objet</label>
                         <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Faites-nous savoir comment nous pouvons vous aider" required>
                     </div>
                     <div class="sm:col-span-2">
+                        <!-- Le message -->
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Votre message</label>
                         <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Laisser nous un commentaire . . ."></textarea>
                     </div>
+                    <!-- Bouton non fonctionnel sans php -->
                     <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Envoyer</button>
                 </form>
             </div>
           </section>
     </main>
+    <!-- Appel du footer -->
     <footer id="footer"></footer>  
+    <!-- Appel du script index.js qui permet de mettre en place le footer et le header  -->
     <script src="index.js"></script>    
 </body>
 </html>

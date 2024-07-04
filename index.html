@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Appel de la navbar -->
     <header id="navbar"></header>
     <main class="w-[450px] h-auto m-auto lg:w-[1140px] lg:m-auto ">
         <h1 class="text-4xl flex justify-center">Bienvenue sur UF<span class="text-pink-700 text-4xl ">CW</span>eb</h1>
@@ -31,8 +32,7 @@
                 },
             ],
         })" class="relative w-full overflow-hidden mt-[80px]">
-
-            <!-- previous button -->
+            <!-- bouton précédent -->
             <button type="button"
                 class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
                 aria-label="previous slide" x-on:click="previous()">
@@ -41,8 +41,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
             </button>
-
-            <!-- next button -->
+            <!-- bouton suivant -->
             <button type="button"
                 class="absolute right-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
                 aria-label="next slide" x-on:click="next()">
@@ -51,9 +50,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             </button>
-
             <!-- slides -->
-            <!-- Change min-h-[50svh] to your preferred height size -->
             <div class="relative min-h-[50vh] lg:min-h-[70svh] w-auto">
                 <template x-for="(slide, index) in slides">
                     <div x-show="currentSlideIndex == index + 1" class="absolute inset-0"
@@ -64,7 +61,7 @@
                 </template>
             </div>
 
-            <!-- indicators -->
+            <!-- Indicateur -->
             <div class="absolute rounded-xl bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 bg-white/75 px-1.5 py-1 md:px-2"
                 role="group" aria-label="slides">
                 <template x-for="(slide, index) in slides">
@@ -76,7 +73,7 @@
             </div>
         </div>
     </main>
-    <!-- component -->
+    <!-- présentation de l'UFC -->
     <section>
         <div class="py-16">
             <div class="mx-auto px-6 max-w-6xl text-gray-500">
@@ -86,11 +83,12 @@
                             class="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-xl bg-white border border-gray-200 ">
                             <div class="size-fit m-auto relative">
                                 <div class="relative h-24 w-56 flex items-center">
-                                   
+
                                     <span
-                                        class="w-fit block mx-auto text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600 ">L'UFC c'est quoi ?</span>
+                                        class="w-fit block mx-auto text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600 ">L'UFC
+                                        c'est quoi ?</span>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div
@@ -99,10 +97,11 @@
                                 <div class="mt-14 text-center relative z-10 space-y-2">
                                     <p class=" text-gray-700">L’UFC, acronyme de Ultimate Fighting
                                         Championship, est une organisation américaine
-                                        d’arts martiaux mixtes (MMA). Elle est actuellement reconnue comme la plus importante ligue mondiale
+                                        d’arts martiaux mixtes (MMA). Elle est actuellement reconnue comme la plus
+                                        importante ligue mondiale
                                         de
                                         ce sport de combat.
-                    </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -112,14 +111,17 @@
                                 <div class="pt-6 lg:px-6">
                                 </div>
                                 <div class="text-center relative z-10 space-y-2">
-                                    <p class= "text-gray-700">L’UFC a révolutionné les arts martiaux depuis sa création en 1993. La
+                                    <p class="text-gray-700">L’UFC a révolutionné les arts martiaux depuis sa création
+                                        en 1993. La
                                         première soirée tenue par la
-                                        promotion à Denver, dans le Colorado, se présentait comme un tournoi permettant de confronter
+                                        promotion à Denver, dans le Colorado, se présentait comme un tournoi permettant
+                                        de confronter
                                         différents
-                                        styles d’arts martiaux et sports de combat dans des règles libres. Cet événement est souvent
+                                        styles d’arts martiaux et sports de combat dans des règles libres. Cet événement
+                                        est souvent
                                         considéré
                                         comme un pilier de l’avènement des « MMA modernes ».
-                    </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -129,22 +131,21 @@
                                 <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
                                     <div class="space-y-2">
                                         <p class="text-gray-700">Depuis, l’UFC a évolué, passant d’une compétition
-                                            inter-styles à un sport de combat dont les règles sont désormais bien établies et reconnues par de
+                                            inter-styles à un sport de combat dont les règles sont désormais bien
+                                            établies et reconnues par de
                                             nombreuses commissions athlétiques aux États-Unis et à travers le monde.
-                        </p>
+                                        </p>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/15158785-gants-de-boxe-logo-vecteur-icone-illustration-vectoriel.jpg" alt="">
+                                    <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/15158785-gants-de-boxe-logo-vecteur-icone-illustration-vectoriel.jpg"
+                                        alt="">
                                     <div class="absolute flex gap-1 top-2 left-3">
-                                        <span
-                                            class="block size-2 rounded-full border"></span>
-                                        <span
-                                            class="block size-2 rounded-full border"></span>
-                                        <span
-                                            class="block size-2 rounded-full border"></span>
+                                        <span class="block size-2 rounded-full border"></span>
+                                        <span class="block size-2 rounded-full border"></span>
+                                        <span class="block size-2 rounded-full border"></span>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -153,16 +154,18 @@
                             <div class="h-full grid sm:grid-cols-2">
                                 <div class="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
                                     <div>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8X2RqMAVFWCAssmy4hMBSGY_g1jIZMVjOQ&s" alt="">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8X2RqMAVFWCAssmy4hMBSGY_g1jIZMVjOQ&s"
+                                            alt="">
                                     </div>
                                     <div class="space-y-2">
                                         <p class=" text-gray-700">Elle a sous contrat environ 450
-                                            compétiteurs et organise des événements à travers le monde, principalement aux États-Unis, mais
+                                            compétiteurs et organise des événements à travers le monde, principalement
+                                            aux États-Unis, mais
                                             aussi au
                                             Japon, au Brésil, en Australie et en Chine.</p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -171,7 +174,7 @@
         </div>
     </section>
 
-
+    <!-- Appel du footer -->
     <footer id="footer"></footer>
     <script>
         document.addEventListener('alpine:init', () => {
@@ -184,7 +187,7 @@
                     if (this.currentSlideIndex > 1) {
                         this.currentSlideIndex = this.currentSlideIndex - 1
                     } else {
-                        // If it's the first slide, go to the last slide           
+                        // S'il s'agit de la première image, passe à la première image          
                         this.currentSlideIndex = this.slides.length
                     }
                 },
@@ -192,14 +195,14 @@
                     if (this.currentSlideIndex < this.slides.length) {
                         this.currentSlideIndex = this.currentSlideIndex + 1
                     } else {
-                        // If it's the last slide, go to the first slide    
+                        // S'il s'agit de la dernière image, passe à la première image    
                         this.currentSlideIndex = 1
                     }
                 },
             }))
         })
     </script>
-
+    <!-- Appel du script index.js qui permet de mettre en place le footer et le header  -->
     <script src="index.js"></script>
 </body>
 

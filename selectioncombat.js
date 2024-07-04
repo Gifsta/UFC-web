@@ -3,7 +3,7 @@ let queryString_url_id = window.location.search;
 let leId = queryString_url_id.slice(1)
 leId = leId.replace("id=", "");
 console.log(leId);
-
+//Appel dans l'api puis déclare l'appel
 let FirstName = document.getElementById('firstName');
 let LastName = document.getElementById('lastName');
 let Nickname = document.getElementById('nickname');
@@ -36,7 +36,7 @@ let DecisionPercentage = document.getElementById('DecisionPercentage');
 fetch('json/Fighters.json')
     .then(res => res.json())
     .then(data => {
-
+//LA boucle incante de +1 pour rechercher les données et l'envoyer dans la seconde page d'information des combattants
         for (let i = 0; i < data.length; i++) {
             if (leId == data[i].FighterId) {
                 FirstName.innerText = `${data[i].FirstName}`;
