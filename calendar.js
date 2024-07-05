@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let newData = [];
 
-    fetch("json/date")
+    fetch("json/date.json")
         .then(res => res.json())
         .then(data => {
 
