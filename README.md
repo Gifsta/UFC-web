@@ -174,5 +174,3 @@ J'ai fait un formulaire pour la page de contact (l'exercice était sans PHP donc
 
 [![image.png](https://i.postimg.cc/V6JZ34Lp/image.png)](https://postimg.cc/dkK9C2Cj)
 
-
-# Merci d'avoir consulté mon read.Md
