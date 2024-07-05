@@ -14,7 +14,7 @@
 <body>
     <!-- Appel de la navbar -->
     <header id="navbar"></header>
-    <main class="w-[450px] h-auto m-auto lg:w-[1140px] lg:m-auto ">
+    <main class="mx-auto">
         <h1 class="text-4xl flex justify-center">Bienvenue sur UF<span class="text-pink-700 text-4xl ">CW</span>eb</h1>
         <div x-data="carousel({
             slides: [
@@ -31,7 +31,7 @@
                     imgAlt: 'Vibrant abstract painting with swirling blue and purple hues on a canvas.',
                 },
             ],
-        })" class="relative w-full overflow-hidden mt-[80px]">
+        })" class="relative overflow-hidden mt-[80px]">
             <!-- bouton précédent -->
             <button type="button"
                 class="absolute left-5 top-1/2 z-20 flex rounded-full -translate-y-1/2 items-center justify-center bg-white/40 p-2 text-slate-700 transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:outline-offset-0"
@@ -51,7 +51,7 @@
                 </svg>
             </button>
             <!-- slides -->
-            <div class="relative min-h-[40vh] lg:min-h-[70svh] w-">
+            <div class="relative min-h-[40vh] lg:min-h-[70svh]">
                 <template x-for="(slide, index) in slides">
                     <div x-show="currentSlideIndex == index + 1" class="absolute inset-0"
                         x-transition.opacity.duration.1000ms>
